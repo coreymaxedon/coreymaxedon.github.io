@@ -135,24 +135,26 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="POST" action="https://formspree.io/cmaxedon15@gmail.com">
+								<form name="input" method="POST" action="https://formspree.io/cmaxedon15@gmail.com">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="Name" placeholder="Your name" />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="_replyto" placeholder="Your email" />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name="message" placeholder="Type your message" rows="6"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
+										<li><input type="hidden" name="_subject" value="Enter your subject here" /></li>
+										<li><input type="hidden" name="_next" value="index.html" /></li>
 									</ul>
 								</form>
 							</section>
