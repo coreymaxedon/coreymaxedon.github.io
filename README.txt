@@ -5,9 +5,6 @@ Personal Website | maxedon.us
 This is a website compiling my experience and projects.
 
 
-
-
-
 Credits:
 
 	Icons:
