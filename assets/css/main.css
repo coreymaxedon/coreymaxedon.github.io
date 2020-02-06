@@ -2951,7 +2951,7 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
-			background-color: #000000;
+			background-color: #1f1f1f;
 		}
 
 			.spotlights > section > .image {
