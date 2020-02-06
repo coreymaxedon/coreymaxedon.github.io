@@ -173,7 +173,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #9bf1ff !important;
+			color: #ff3b3bd7 !important;
 		}
 
 		a:active {
@@ -3166,7 +3166,7 @@ input, select, textarea {
 			}
 
 			#header .logo:hover strong {
-				background-color: #9bf1ff;
+				background-color: #ff3b3bd7;
 			}
 
 			#header .logo:active strong {
