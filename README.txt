@@ -1,5 +1,5 @@
 Corey Maxedon
-Personal Website | maxedon.us
+Personal Website | maxedon.net
 
 
 This is a website compiling my experience and projects.
