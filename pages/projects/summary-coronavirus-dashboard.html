@@ -43,27 +43,86 @@
 						</ul>
 					</nav>
 
+				<!-- Banner -->
+				<section id="banner" class="style2">
+					<div class="inner">
+						<span class="image">
+							<img src="/images/coronavirus.jpg" alt="" />
+						</span>
+						<header class="major">
+							<h1>Summary</h1>
+						</header>
+						<ul class="actions">
+							<li><a href="/pages/projects/global-coronavirus-dashboard.html" class="button primary">Global</a></li>
+							<li><a href="/pages/projects/state-coronavirus-dashboard.html" class="button primary">State</a></li>
+							<li><a href="/pages/projects/county-coronavirus-dashboard.html" class="button primary">County</a></li>
+							<li><a href="/pages/projects/summary-coronavirus-dashboard.html" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</section>
+
 				<!-- Main -->
 					<div id="main" class="alt">
 
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
-									<header class="major">
-										<h1>Summary</h1>
-									</header>
-									<ul class="actions">
-										<li><a href="/pages/projects/global-coronavirus-dashboard.html" class="button primary">Global</a></li>
-										<li><a href="/pages/projects/state-coronavirus-dashboard.html" class="button primary">State</a></li>
-										<li><a href="/pages/projects/county-coronavirus-dashboard.html" class="button primary">County</a></li>
-										<li><a href="/pages/projects/summary-coronavirus-dashboard.html" class="button">Learn more</a></li>
-									</ul>
 									<p></p>
-									<p>More coming soon!</p>
-									<p></p>
-									<p>This is my first attempt at a dashboard. I have picked up Tableau over the last few weeks. I thought this analysis was a fitting start to this journey.</p>
+									<p>
+										This is my first attempt at a dashboard. I have picked up Tableau over the last few weeks. 
+										I thought this analysis was a fitting start to this journey. I recently lost my summer 
+										internship due to COVID-19. The main purpose of picking up Tableau was to utilize during 
+										the internship. Nevertheless, it is a great skill to be able to say I am proficient at.
+									</br></br>
+										For this project, I wanted to incorporate as many new programming techniques as possible 
+										using R and Tableau. The first step was to find reliable data for my analysis. Like many 
+										news reports and articles, I found the most reliable source to be data from John Hopkins 
+										University. The data is updated daily and easy to retrieve using R. I built an R script 
+										to download the CSV file from John Hopkins' 
+										<a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" \>GitHub</a> page. 
+										The script downloads data on the global, state, and county levels. I was interested in 
+										statistics not directly given in the data, such as new confirmed cases and new deaths per 
+										day. The raw data provides a lot of location information, dates, confirmed cases, and 
+										confirmed deaths. I manipulated the data to make new columns for the statistics I was 
+										interested in using dplyr. I also reduced the data size by removing the location columns 
+										I had no use for. File size ended up being important when working with Tableau Public which 
+										I learned painfully along the way.
+									</br></br>
+										Twenty hours of painstaking trial and error later, I had finally created files for world, 
+										state, and county level data in the form that best fit my needs in Tableau. With the future 
+										in mind, I wanted to find a way to update my dashboards automatically. After a few quick 
+										searches, I was able to find a package called TaskscheduleR. This is a package in R that 
+										gives easy setup for scripts to run automatically in the background of a computer. I set my 
+										script to run daily. Running the script automatically was the easy part. Finding a way to have 
+										Tableau utilize the refreshed data was another beast.
+									</br></br>
+										The best solution I was able to find was having my script upload the refreshed data to Google 
+										Drive. Again, I found an R package, googledrive, that made somewhat easy work of this. The 
+										package is new and does not have a lot of documentation on its variety of uses. I needed a 
+										way to upload my data into Google Drive as a Google Sheet as to not require the use of memory 
+										and to later use with Tableau Public. After some trial and error, my final script is able to 
+										retrieve fresh data every day and update the data in Google Drive.
+									</br></br>
+										The hardest part of this analysis was the data retrieval, but I was able to learn many new 
+										skills in R that will be useful for my future. Most of the data visualization in Tableau is 
+										making nice graphs and tables using skills learned in the first courses of the Tableau classes 
+										online. Dashboards and calculations were all taught in this course. I created some interesting 
+										statistics, such as doubling time and growth rate using Tableau. Everything else was a matter of 
+										deciding what looked best and how to present a large amount of information in a clean, user friendly way. 
+										Google Sheets and Tableau Public work well together so I was able to connect the two very 
+										quickly. The final product is a dashboard with automatically updated data. The county level is 
+										not automatic due to the file size being too large to be automatic in Tableau Public.
+									</br></br>
+										The final step was putting it here on my website and taking a few insights from what can be 
+										gathered in the dashboards. Tableau Public makes it very easy to embed dashboards for a 
+										programmer's own use. The code for doing so was created by Tableau so I added the code to my 
+										HTML files for the website pages. The dashboards turned out well. A few key takeaways are the upward trending doubling 
+										time. The growth in number of confirmed cases is dropping significantly. There is a lag between 
+										confirmed cases and confirmed deaths, but the measures taken by the government seem to have been useful. 
+										I encourage you to play around with the dashboards and create your own insights.
+									</p>
 									
-									<i>Last Updated: 4/11/2020</i>
+									<i>Last Updated: 5/1/2020</i>
 								</div>
 							</section>
 							

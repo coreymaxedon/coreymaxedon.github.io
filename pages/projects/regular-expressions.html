@@ -43,16 +43,24 @@
 						</ul>
 					</nav>
 
+				<!-- Banner -->
+				<section id="banner" class="style2">
+					<div class="inner">
+						<span class="image">
+							<img src="/images/dickens1.jpg" alt="" />
+						</span>
+						<header class="major">
+							<h1>Regular Expressions</h1>
+						</header>
+					</div>
+				</section>
+
 				<!-- Main -->
 					<div id="main" class="alt">
 
 						<!-- One -->
 							<section id="one">
 								<div class="inner">
-									<header class="major">
-										<h1>Regular Expressions</h1>
-									</header>
-									<span class="image main"><img src="/images/dickens1.jpg" alt="" style="width: 100%" /></span>
 									<p>This was my first ever project in R. This was an assignment in my statistical computing class. I really enjoyed the process and learning about regular expressions. That is one subject I had never played around with before. This project showed me how powerful regular expressions can be. The point of this assignment was to parse twenty-one of Charles Dickens' books and return a data frame with the number of words, letters, and characters in each book.</p>
 									<p>Retrieving the title was simple. All files had text that said, "title:" right before every title and ended with a new line. Therefore, I just saved the text in between these items with the regular expression: "(T|t)itle:.+?\n". Word count and character count were also quite simple. The book was saved as a string so I was able to split by spacing and count the length of this new object. R has a nice function for letter count so I just used nchar for that. The tricky part was retrieving the number of characters in each novel.</p>
 									<p>The regular expression for character was going to be a beast. I knew that from the beginning. I knew each character would start with an honorific and then state the name. The tricky part was getting first name initials like Dr. R. Smith or Mrs. Susan B. Coldwell. The regular expression and its logic took about twice as long as coding the rest of the project. After some thought and questions to my peers, the regular expression in all its beauty was:</p>
