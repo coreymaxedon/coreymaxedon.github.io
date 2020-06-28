@@ -69,63 +69,78 @@
 								<div class="inner">
 									<p></p>
 									<p>
-										This is my first attempt at a dashboard. I have picked up Tableau over the last few weeks. 
-										I thought this analysis was a fitting start to this journey. I recently lost my summer 
-										internship due to COVID-19. The main purpose of picking up Tableau was to utilize during 
+										This is my first attempt at a dashboard. I have picked up Tableau over the last few weeks.
+										I thought this analysis was a fitting start to this journey. I recently lost my summer
+										internship due to COVID-19. The main purpose of picking up Tableau was to utilize during
 										the internship. Nevertheless, it is a great skill to be able to say I am proficient at.
 									</br></br>
-										For this project, I wanted to incorporate as many new programming techniques as possible 
-										using R and Tableau. The first step was to find reliable data for my analysis. Like many 
-										news reports and articles, I found the most reliable source to be data from John Hopkins 
-										University. The data is updated daily and easy to retrieve using R. I built an R script 
-										to download the CSV file from John Hopkins' 
-										<a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" \>GitHub</a> page. 
-										The script downloads data on the global, state, and county levels. I was interested in 
-										statistics not directly given in the data, such as new confirmed cases and new deaths per 
-										day. The raw data provides a lot of location information, dates, confirmed cases, and 
-										confirmed deaths. I manipulated the data to make new columns for the statistics I was 
-										interested in using dplyr. I also reduced the data size by removing the location columns 
-										I had no use for. File size ended up being important when working with Tableau Public which 
+										For this project, I wanted to incorporate as many new programming techniques as possible
+										using R and Tableau. The first step was to find reliable data for my analysis. Like many
+										news reports and articles, I found the most reliable source to be data from John Hopkins
+										University. The data is updated daily and easy to retrieve using R. I built an R script
+										to download the CSV file from John Hopkins'
+										<a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" \>GitHub</a> page.
+										The script downloads data on the global, state, and county levels. I was interested in
+										statistics not directly given in the data, such as new confirmed cases and new deaths per
+										day. The raw data provides a lot of location information, dates, confirmed cases, and
+										confirmed deaths. I manipulated the data to make new columns for the statistics I was
+										interested in using dplyr. I also reduced the data size by removing the location columns
+										I had no use for. File size ended up being important when working with Tableau Public which
 										I learned painfully along the way.
 									</br></br>
-										Twenty hours of painstaking trial and error later, I had finally created files for world, 
-										state, and county level data in the form that best fit my needs in Tableau. With the future 
-										in mind, I wanted to find a way to update my dashboards automatically. After a few quick 
-										searches, I was able to find a package called TaskscheduleR. This is a package in R that 
-										gives easy setup for scripts to run automatically in the background of a computer. I set my 
-										script to run daily. Running the script automatically was the easy part. Finding a way to have 
+										Twenty hours of painstaking trial and error later, I had finally created files for world,
+										state, and county level data in the form that best fit my needs in Tableau. With the future
+										in mind, I wanted to find a way to update my dashboards automatically. After a few quick
+										searches, I was able to find a package called TaskscheduleR. This is a package in R that
+										gives easy setup for scripts to run automatically in the background of a computer. I set my
+										script to run daily. Running the script automatically was the easy part. Finding a way to have
 										Tableau utilize the refreshed data was another beast.
 									</br></br>
-										The best solution I was able to find was having my script upload the refreshed data to Google 
-										Drive. Again, I found an R package, googledrive, that made somewhat easy work of this. The 
-										package is new and does not have a lot of documentation on its variety of uses. I needed a 
-										way to upload my data into Google Drive as a Google Sheet as to not require the use of memory 
-										and to later use with Tableau Public. After some trial and error, my final script is able to 
+										The best solution I was able to find was having my script upload the refreshed data to Google
+										Drive. Again, I found an R package, googledrive, that made somewhat easy work of this. The
+										package is new and does not have a lot of documentation on its variety of uses. I needed a
+										way to upload my data into Google Drive as a Google Sheet as to not require the use of memory
+										and to later use with Tableau Public. After some trial and error, my final script is able to
 										retrieve fresh data every day and update the data in Google Drive.
 									</br></br>
-										The hardest part of this analysis was the data retrieval, but I was able to learn many new 
-										skills in R that will be useful for my future. Most of the data visualization in Tableau is 
-										making nice graphs and tables using skills learned in the first courses of the Tableau classes 
-										online. Dashboards and calculations were all taught in this course. I created some interesting 
-										statistics, such as doubling time and growth rate using Tableau. Everything else was a matter of 
-										deciding what looked best and how to present a large amount of information in a clean, user friendly way. 
-										Google Sheets and Tableau Public work well together so I was able to connect the two very 
-										quickly. The final product is a dashboard with automatically updated data. The county level is 
+										The hardest part of this analysis was the data retrieval, but I was able to learn many new
+										skills in R that will be useful for my future. Most of the data visualization in Tableau is
+										making nice graphs and tables using skills learned in the first courses of the Tableau classes
+										online. Dashboards and calculations were all taught in this course. I created some interesting
+										statistics, such as doubling time and growth rate using Tableau. Everything else was a matter of
+										deciding what looked best and how to present a large amount of information in a clean, user friendly way.
+										Google Sheets and Tableau Public work well together so I was able to connect the two very
+										quickly. The final product is a dashboard with automatically updated data. The county level is
 										not automatic due to the file size being too large to be automatic in Tableau Public.
 									</br></br>
-										The final step was putting it here on my website and taking a few insights from what can be 
-										gathered in the dashboards. Tableau Public makes it very easy to embed dashboards for a 
-										programmer's own use. The code for doing so was created by Tableau so I added the code to my 
-										HTML files for the website pages. The dashboards turned out well. A few key takeaways are the upward trending doubling 
-										time. The growth in number of confirmed cases is dropping significantly. There is a lag between 
-										confirmed cases and confirmed deaths, but the measures taken by the government seem to have been useful. 
+										The final step was putting it here on my website and taking a few insights from what can be
+										gathered in the dashboards. Tableau Public makes it very easy to embed dashboards for a
+										programmer's own use. The code for doing so was created by Tableau so I added the code to my
+										HTML files for the website pages. The dashboards turned out well. A few key takeaways are the upward trending doubling
+										time. The growth in number of confirmed cases is dropping significantly. There is a lag between
+										confirmed cases and confirmed deaths, but the measures taken by the government seem to have been useful.
 										I encourage you to play around with the dashboards and create your own insights.
+									</br></br>
+									  Update #1: So I broke down and bought a MacBook. Therefore, my daily driver was no longer my old Windows
+										device that data update program ran through. I was forced to go down the rabbit hole of learning
+										how to automate scripts using MacOS. This was no easy task. I first learned of the Task
+										Scheduler alternative called LaunchDaemon for Unix and Linux based systems. Surprisingly,
+										there is no convenient GUI to create scheduled tasks like there was for Windows. R had a nice
+										Shiny app to create CRON jobs, but being on a laptop, missed jobs are not run at startup so
+										I had to learn LaunchDaemon code in order to get my R script back up and running. Several painstaking
+										hours of trial and error had passed. I learned all about setting permissions for files and programs.
+										I finally reached a point of using something that works. It isn't as consistent as the Windows version,
+										but it suites my needs.
+									</br></br>
+									  Update #2: The county data exceeded the limits of Tableau x Google Sheets so I began using the
+										csv files on my computer and updating weekly. Tableau Public only supports Google Sheets of 10 MB
+										of less. This was a quick and painless fix, but takes away from the simplicity of my program.
 									</p>
-									
-									<i>Last Updated: 5/1/2020</i>
+
+									<i>Last Updated: 6/28/2020</i>
 								</div>
 							</section>
-							
+
 						<!-- Three -->
 							<section id="three">
 								<div class="inner">
@@ -135,7 +150,7 @@
 									<p>I hope you enjoyed. Have a great day.</p>
 									<ul class="actions stacked">
 										<li><a href="/pages/projects.html" class="button primary">Back to Projects</a></li>
-										<li><a href="/index.html" class="button back">Back Home</a></li>										
+										<li><a href="/index.html" class="button back">Back Home</a></li>
 									</ul>
 								</div>
 							</section>
